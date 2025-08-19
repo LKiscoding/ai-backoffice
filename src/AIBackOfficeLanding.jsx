@@ -351,14 +351,17 @@ export default function AIBackOfficeLanding() {
                 $99<span className="text-base opacity-70">/month</span>
               </div>
               <div className="mt-1 text-xs opacity-70">Limited to the first 50 agencies</div>
-              <motion.button
+              {/* Updated CTA: redirect to the live Stripe payment link instead of scrolling to the form. */}
+              <motion.a
                 whileHover={{ y: prefersReducedMotion ? 0 : -2 }}
                 whileTap={{ scale: prefersReducedMotion ? 1 : 0.98 }}
-                onClick={scrollToForm}
+                href="https://buy.stripe.com/4gM3cw2BWbTbeog6H3N0Nm01"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-white shadow hover:shadow-lg"
               >
-                Join Waitlist <ArrowRight className="h-4 w-4" />
-              </motion.button>
+                Subscribe <ArrowRight className="h-4 w-4" />
+              </motion.a>
             </motion.div>
           </div>
         </motion.div>
@@ -503,20 +506,10 @@ export default function AIBackOfficeLanding() {
         whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
         viewport={{ once: true }}
       >
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
-          <div className="opacity-80">© {new Date().getFullYear()} AI Back Office</div>
-          <div className="flex items-center gap-4 opacity-80">
-            <a href="#" className="hover:opacity-100">
-              Privacy
-            </a>
-            <a href="#" className="hover:opacity-100">
-              Terms
-            </a>
-            <a href="#problem" className="hover:opacity-100">
-              Contact
-            </a>
+          <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 md:flex-row">
+            {/* Display only the copyright notice in the footer. Removed unused Privacy/Terms/Contact links. */}
+            <div className="opacity-80">© {new Date().getFullYear()} AI Back Office</div>
           </div>
-        </div>
       </motion.footer>
     </div>
   );

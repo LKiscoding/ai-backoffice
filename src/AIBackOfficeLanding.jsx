@@ -355,7 +355,9 @@ export default function AIBackOfficeLanding() {
               <motion.a
                 whileHover={{ y: prefersReducedMotion ? 0 : -2 }}
                 whileTap={{ scale: prefersReducedMotion ? 1 : 0.98 }}
-                href="https://buy.stripe.com/4gM3cw2BWbTbeog6H3N0Nm01"
+                // Updated payment link (subscription) generated Aug 19; replaced old broken link
+                // Updated link: new Stripe subscription payment link created Aug 19 after account verification
+                href="https://buy.stripe.com/1A414o6Sc4qJeog8eP3Nm03"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-2 rounded-xl bg-slate-900 px-5 py-3 text-white shadow hover:shadow-lg"
